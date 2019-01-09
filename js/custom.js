@@ -17,7 +17,21 @@
 		var width = jQuery(window).width();
 
 
-
+		jQuery('body').append('<div class="show_menu_tg">Menu</div>\
+			<div class="menu_tg"><h3>Menu </h3>\
+			<ul>\
+			<li><a href="index.html"> Trang chủ </a> </li>\
+			<li><a href="bang_gia_hosting.html"> Bảng giá hosting</a> </li>\
+			<li><a href="bang_gia_domain.html"> Bảng giá domain </a> </li>\
+			<li><a href="lichsugiaodich.html"> Lịch sử giao dịch </a> </li>\
+			<li><a href="naptien.html"> Nạp tiền </a> </li>\
+			<li><a href="order_cart1.html"> Order Cart 1 </a> </li>\
+			<li><a href="order_cart2.html">  Order Cart 2 </a> </li>\
+			</ul>\
+			</div>');
+		jQuery('.show_menu_tg').click(function(){
+			jQuery('.menu_tg').toggle(300);
+		});
 
 		jQuery('.click-ul-tog').click(function(e){
 			jQuery(this).find('.ul-tog').slideToggle(300).click(function(e_ul){
@@ -52,9 +66,18 @@
 		jQuery('ul.tab_change_domain li, .tab_change_hosting_parent li').removeClass('current');
 		jQuery('.tab-content').removeClass('current');
 		jQuery(this).addClass('current');
+		jQuery('.tab_change_hosting_child>li:first-child').addClass('current').siblings().removeClass('current');
 		jQuery("#"+tab_id).addClass('current');
+		jQuery('.tab_change_hosting_child+.tab-child-content').addClass('current');
 		});
 
+		jQuery('ul.tab_change_hosting_child li').click(function(){
+		var tab_id = jQuery(this).attr('data-tab');
+		jQuery('ul.tab_change_hosting_child li').removeClass('current');
+		jQuery('.tab-child-content').removeClass('current');
+		jQuery(this).addClass('current');
+		jQuery("#"+tab_id).addClass('current');
+		});
 		
 
 		jQuery('.icon_collapse_click').click(function(){
