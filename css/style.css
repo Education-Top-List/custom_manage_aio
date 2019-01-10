@@ -680,7 +680,7 @@ img{
 	font-size: 19px;
 	line-height: 28px;
 	background: #35a236;
-	padding: 20px 30px;
+	padding: 20px 20px;
 	color: #fff;
 	text-transform: uppercase;
 	font-weight: 900;
@@ -1344,7 +1344,7 @@ img{
 	font-size: 15px;
 }
 .list_domain thead tr>th:not(:first-child){
-	background: #6e6e6e;
+	background: #e2e2e2;
 	font-size: 15px;
 }
 .list_domain tbody tr>td{
@@ -1942,9 +1942,396 @@ font-weight: 700;
 /* end template_qltenmien*/
 
 
+/* template_login*/
+
+.wrap_login{
+	position: fixed;
+	top: 46%;
+	left: 50%;
+	max-width: 450px;
+	width: 100%;
+	transform:translate(-50%,-50%);
+	background: #fff;
+	border-radius: 5px;
+	padding: 20px 30px 50px 30px;
+	box-shadow: 0 12px 57px -2px black;
+}
+
+.wrap_login::before{
+
+  position: absolute;
+  bottom: 0;
+
+}
+
+.template_login{
+	    position: fixed;
+	    width: 100%;
+	    bottom: 0px;
+	    top: 0px;
+	    background: url(../images/bg_login.jpg) no-repeat;
+	    background-size: cover;
+	    left: 0px;
+}
+
+.wrap_login h2{
+
+font-size: 32px;
+
+text-transform: uppercase;
+
+color: #4b4b4b;
+
+text-align: center;
+
+margin: 20px 0px 0px 0px;
+}
+
+.tg_login_area .list_group input[type="text"],.tg_login_area .list_group input[type="password"]{
+
+width: 100%;
+
+border: 1px solid #cccccc;
+
+border-radius: 5px;
+
+padding: 15px 45px 15px 45px;
+
+font-size: 15px;
+}
+
+.tg_login_area{
+
+margin: 40px 0px;
+}
+
+.tg_login_area .list_group{
+
+position: relative;
+
+margin: 0px 0px 30px 0px;
+}
+
+.tg_login_area .list_group input+figure{
+
+position: absolute;
+
+top: 16px;
+
+left: 20px;
+}
+
+.show_passw{
+
+cursor: pointer;
+
+position: absolute;
+
+top: 16px;
+
+right: 15px;
+}
+
+.tg_login_area input[type="submit"] {
+
+background: #3faf40;
+
+width: 100%;
+
+padding: 17px 0px;
+
+color: #fff;
+
+text-transform: uppercase;
+
+font-size: 20px;
+
+font-weight: 700;
+
+border: none;
+
+border-radius: 5px;
+
+border-bottom: 4px solid #239424;
+
+display: block;
+--hover:#237b23;
+transition: all 0.3s;
+}
+.tg_login_area input[type="submit"]:hover{
+    box-shadow: inset -195px 0 0 0 var(--hover), inset 195px 0 0 0 var(--hover);
+}
+.passw_area .rememb_pass{
+
+float: left;
+}
+.lost_passw{
+
+float: right;
+}
+.passw_area .rememb_pass label{
+	position: relative;
+	margin: 0px 0px 0px 10px;
+	font-weight: normal;
+	font-size: 15px;
+}
+.passw_area .rememb_pass input{
+	visibility: hidden;
+	opacity: 0;
+}
+.passw_area .rememb_pass label::before{
+	position: absolute;
+	content:"";
+	width: 20px;
+	height: 20px;
+	border: 1px solid #bbb0b0;
+	border-radius: 3px;
+	left: -28px;
+	background:#fff;
+	top: 0px;
+}
+
+.passw_area .rememb_pass input:checked+label::after{
+	position: absolute;content:"\f00c";font:normal normal normal 14px/1 FontAwesome;color:#fff;width: 20px;height: 20px;line-height: 20px;text-align: center;border-radius: 3px;left: -28px;/* background:#fff; */top: 0px;background: #3faf40;}
+.lost_passw a{
+	
+margin: 0px;
+	
+font-size: 15px;
+	
+font-weight: 700;
+	
+color: #3faf40;
+}
+
+.passw_area+p{
+	position: absolute;
+	bottom: -70px;
+	left: 0px;
+	right: 0px;
+	text-align: center;
+	margin:0px auto;
+	color: #fff;
+	font-size: 16px;
+	line-height: 25px;
+}
+
+/* end template_login*/
+
+/* template_bvtk */
+
+.agree_term{
+	margin: 25px 0px 35px 0px;
+}
+
+.agree_term label{
+    position: relative;
+    margin: 0px 0px 0px 10px;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.agree_term input{
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.agree_term label::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #bbb0b0;
+    border-radius: 3px;
+    left: -28px;
+    background: #fff;
+    top: 0px;
+}
+
+.agree_term  input:checked+label::after{
+	    position: absolute;
+    content: "\f00c";
+    font: normal normal normal 14px/1 FontAwesome;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    left: -28px;
+    /* background: #fff; */
+    top: 0px;
+    background: #3faf40;
+}
+[class*="bvtk_"] .textwidget p{
+	font-size: 15px;
+	line-height: 26px;
+	margin: 0px 0px 3px 0px;
+}
+[class*="bvtk_"] .textwidget>ul>li>ul{
+	padding:0px 0px 0px 40px;
+}
+[class*="bvtk_"] .textwidget>ul>li>ul>li>ul{
+	padding: 0px 0px 0px 30px;
+}
+[class*="bvtk_"] .textwidget>p:last-child{
+	color:red;
+}
+[class*="bvtk_"] .textwidget p a{
+	color:#3faf40;
+}
+[class*="bvtk_"] .form-group .list_group{
+	max-width: 500px;
+	width: 100%;
+	position: relative;
+	margin: 0px 0px 20px 0px;
+}
+[class*="bvtk_"] .form-group .list_group label{
+	width: 18%;
+}
+[class*="bvtk_"] .form-group .list_group input{
+	width: 79%;
+	border: 1px solid #cdcdcd;
+	border-radius: 5px;
+	padding: 7px 10px;
+}
+[class*="bvtk_"] .form-group .list_group p{
+	position: absolute;
+	right: -19px;
+	margin:0px;
+	color:red;
+	top: 8px;
+}
+[class*="bvtk_"] .note_submit{
+	clear: both;
+	margin: 25px 0px 0px 0px;
+}
+[class*="bvtk_"] .note_submit i{
+	font-size: 15px;
+	line-height: 23px;
+	display: block;
+}
+
+[class*="bvtk_"] .note_submit input[type="submit"]{
+	
+display: inline-block;
+	
+margin: 20px 0px 0px 0px;
+	
+background: #ff6600;
+	
+border: none;
+	
+color: #fff;
+	
+text-transform: uppercase;
+	
+padding: 15px 10px;
+	
+border-radius: 5px;
+	
+max-width: 210px;
+	
+width: 100%;
+	
+font-size: 18px;
+	
+font-weight: 700;
+	
+border-bottom: 3px solid #b74900;
+}
+[class*="bvtk_"]  input[type="submit"]:hover{
+	background: #e68341;
+}
+.bvtk_question .form-group .list_group input{
+	width: 83%;
+}
+.bvtk_question .list-form-group{
+	display: table;
+	width: 100%;
+}
+.bvtk_question .list-form-group .form-group{
+	float:left;
+	margin: 0px 60px 0px 0px;
+	/* display: inline-block; */
+	max-width: 500px;
+	width: 100%;
+}
+.bvtk_question .form-group .list_group label{
+	width: 14%;
+}
+.list_bvtk>ul>li{
+	    display: inline-block;
+    margin: 0px 5px 0px 5px;
+}
+.list_bvtk>ul{
+	    display: table;
+    margin: 20px auto 30px auto;
+}
+.list_bvtk {
+	padding:15px 20px 50px 20px;
+}
+.list_bvtk ul li.current a {
+    background: #3faf40;
+    color: #fff;
+}
+
+.list_bvtk>ul>li>a {
+    display: table;
+    padding: 9px 20px;
+    background: none;
+    color: #3faf40;
+    border-radius: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: 1px solid #3faf40;
+    position: relative;
+}
+.list_bvtk ul li.current a::before {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    content: "";
+    border-top: 10px solid #3faf40;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.bvtk_qrcode p{
+	    font-size: 15px;
+    line-height: 26px;
+    margin: 0px 0px 3px 0px;
+}
+.bvtk_qrcode strong{
+
+color: #35a236;
+
+font-size: 15px;
+
+text-decoration: underline;
+
+display: inline-block;
+
+margin: 15px 0px 0px 0px;
+}
+.bvtk_qrcode p span{
+	font-weight: 700;
+	font-size: 17px;
+}
+.bvtk_qrcode figure{
+	margin:20px 0px 10px 0px;
+}
+
+/* template_bvtk */
+
 /* other css */
-
-
 .tab-content, .tab-child-content{
 	display: none;
 }
@@ -2003,10 +2390,6 @@ font-weight: 700;
 	font-size: 15px;
 }
 
-
-
-
-
 /* other css */
 
 
@@ -2058,6 +2441,9 @@ font-weight: 700;
 	}
 }
 @media(max-width: 767px){
+	.wrap_login{
+		padding:20px 15px 50px 15px;
+	}
 	.pd{
 		display: inline-block;
 	}

@@ -27,6 +27,8 @@
 			<li><a href="naptien.html"> Nạp tiền </a> </li>\
 			<li><a href="order_cart1.html"> Order Cart 1 </a> </li>\
 			<li><a href="order_cart2.html">  Order Cart 2 </a> </li>\
+			<li><a href="dangnhap.html">  Đăng nhập </a> </li>\
+			<li><a href="baovetaikhoan.html">  Bảo vệ tài khoản </a> </li>\
 			</ul>\
 			</div>');
 		jQuery('.show_menu_tg').click(function(){
@@ -61,9 +63,9 @@
 			e.preventDefault();
 		});
 
-		jQuery('ul.tab_change_domain li , .tab_change_hosting_parent li').click(function(){
+		jQuery('ul.tab_change_domain li , .tab_change_hosting_parent li, ul.tab_change_bvtk li').click(function(){
 		var tab_id = jQuery(this).attr('data-tab');
-		jQuery('ul.tab_change_domain li, .tab_change_hosting_parent li').removeClass('current');
+		jQuery('ul.tab_change_domain li, .tab_change_hosting_parent li,ul.tab_change_bvtk li').removeClass('current');
 		jQuery('.tab-content').removeClass('current');
 		jQuery(this).addClass('current');
 		jQuery('.tab_change_hosting_child>li:first-child').addClass('current').siblings().removeClass('current');
