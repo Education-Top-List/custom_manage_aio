@@ -29,6 +29,9 @@
 			<li><a href="order_cart2.html">  Order Cart 2 </a> </li>\
 			<li><a href="dangnhap.html">  Đăng nhập </a> </li>\
 			<li><a href="baovetaikhoan.html">  Bảo vệ tài khoản </a> </li>\
+			<li><a href="quanlytenmien.html">  Quản lý tên miền </a> </li>\
+			<li><a href="cauhinh_mail1.html">  Cấu hình mail 1</a> </li>\
+			<li><a href="cauhinh_mail2.html">  Cấu hình mail 2</a> </li>\
 			</ul>\
 			</div>');
 		jQuery('.show_menu_tg').click(function(){
