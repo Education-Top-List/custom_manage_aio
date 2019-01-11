@@ -3134,3 +3134,31 @@ img{
 			box-shadow: 0 0 0 0 var(--hover);
 		}
 	}
+
+	/*by Khuyennt*/
+.list_domain tbody>tr td{border: solid 1px #e5e6e7!important}
+[class*="tb_list_"] table thead th,
+.list_domain thead tr>th:not(:first-child){padding:15px 10px; background:#fff; text-transform:uppercase}
+.list_domain thead tr>th:first-child{color:#ff6600; font-size:18px}
+.list_domain tbody tr:nth-child(even){background:#f2f2f2}
+
+
+.tb_list_info_customer tr>td,
+.tb_list_info_customer tr>td:last-child,
+.tb_list_order thead th:first-child,
+.tb_list_order td:first-child{text-align:left!important}
+.tb_list_order td:last-child,
+.tb_list_order thead th:last-child{text-align:right!important}
+
+
+[class*="bvtk_"] .note_submit input[type="submit"]{padding:10px}
+
+.wrap_st_mail .st_smtpmail .list_group_child figure p{width: 400px}
+
+.template_lsgd table{font-size:14px}
+.template_lsgd table tr th{ background:#e2e2e2} 
+
+.tg_pagination ul li a:hover{ background:#3faf40; color:#fff}
+.tg_pagination ul>li:first-child a{border-radius:5px 0 0 5px}
+.tg_pagination ul>li:last-child a{border-radius:0 5px 5px 0}
+.tg_pagination ul li a{padding:6px 12px}
