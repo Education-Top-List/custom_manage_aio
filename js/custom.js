@@ -42,6 +42,7 @@
 			jQuery(this).find('.ul-tog').slideToggle(300).click(function(e_ul){
 				e_ul.stopPropagation();
 			});
+			jQuery('.click-ul-tog').not(this).find('.ul-tog').hide();
 		});
 
 		// SHOP POPUP
@@ -59,7 +60,7 @@
   			}
 		});
 
-
+	
 
 		jQuery('.btn_chart ul li').click(function(e){
 			jQuery(this).addClass('active').siblings().removeClass('active');
@@ -87,12 +88,16 @@
 
 		jQuery('.icon_collapse_click').click(function(){
 				jQuery(".menu-fixed").toggleClass('to_left');
-				jQuery('.menu-fixed h3,.menu-fixed ul li>a:nth-child(1),.icon_collapse_click i.fa-bars').toggleClass('hide');
-				jQuery('.menu-fixed ul li>a:nth-child(2),.menu-fixed ul>li p,.icon_collapse_click i.fa-arrows-alt').toggleClass('show');
+				jQuery('.menu-fixed h3,.menu-fixed>ul>li>a:nth-child(1),.icon_collapse_click i.fa-bars').toggleClass('hide');
+				jQuery('.menu-fixed>ul>li>a:nth-child(2),.menu-fixed ul>li p,.icon_collapse_click i.fa-arrows-alt').toggleClass('show');
 				jQuery('#content').toggleClass('content_to_left');
 		});
 
 		// MENU MOBILE
+		if(width<1100){
+			jQuery('.menu-fixed>ul').addClass('menu');
+			jQuery('.menu-fixed').addClass('menu_mobile_full');
+		}
 		jQuery(".icon_mobile_click").click(function(){
 			jQuery(this).fadeOut(300);
 			jQuery(".menu-fixed").addClass('menu_show').stop().animate({left: "0px"},260);
@@ -115,18 +120,18 @@
 			jQuery(".icon_mobile_click").fadeIn(300);
 			jQuery("#page_wrapper").removeClass('page_wrapper_active');
 		});
-		jQuery('.mobile-menu ul.menu').children().has('ul.sub-menu').click(function(){
+		jQuery('ul.menu').children().has('ul.sub-menu').click(function(){
 			jQuery(this).children('ul').slideToggle();
 			jQuery(this).siblings().has('ul.sub-menu').find('ul.sub-menu').slideUp();
 		}).children('ul').children().click(function(event){event.stopPropagation()});
-		jQuery('.mobile-menu ul.menu').children().find('ul.sub-menu').children().has('ul.sub-menu').click(function(){
+		jQuery('ul.menu').children().find('ul.sub-menu').children().has('ul.sub-menu').click(function(){
 			jQuery(this).find('ul.sub-menu').slideToggle();
 		});
-		jQuery('.mobile-menu ul.menu li').has('ul.sub-menu').click(function(event){
+		jQuery('ul.menu li').has('ul.sub-menu').click(function(event){
 			jQuery(this).toggleClass('editBefore_mobile');
 		});
-		jQuery('.mobile-menu ul.menu').children().has('ul.sub-menu').addClass('menu-item-has-children');
-		jQuery('.mobile-menu ul.menu li').click(function(){
+		jQuery('ul.menu').children().has('ul.sub-menu').addClass('menu-item-has-children');
+		jQuery('ul.menu li').click(function(){
 			$(this).addClass('active').siblings().removeClass('active, editBefore_mobile');
 		});
 
